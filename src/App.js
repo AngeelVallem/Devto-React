@@ -1,4 +1,7 @@
 import logo from './logo.svg';
+
+import Button from './Test';
+
 import './App.css';
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+
+       <Button color='red'/>
+       <Button color='peru'/>
       </header>
     </div>
   );
