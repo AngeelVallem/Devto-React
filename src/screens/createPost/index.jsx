@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router";
 
-import NavPost from "../../components/createPost/navBar";
+import NavPost from "../../components/createPost/navBar/navBar";
 
-const CustomBodyBg = styled.body`
+const CustomBodyBg = styled.div`
   height: 100vh;
   width: 100vw;
   background: #eef0f1;
@@ -13,7 +12,7 @@ const CustomBodyBg = styled.body`
 const NewPost = () => {
   return (
     <CustomBodyBg>
-      <NavPost>a</NavPost>
+      <NavPost></NavPost>
     </CustomBodyBg>
   );
 };
