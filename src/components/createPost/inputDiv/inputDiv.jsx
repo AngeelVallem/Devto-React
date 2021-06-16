@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
 import CustomInput from "./inputCreate";
@@ -17,24 +17,24 @@ export default function AddNewPost() {
   const [tags, setTags] = useState("");
   const [img, setImg] = useState("");
   const [post, setPost] = useState("");
+  // const [show, setShow] = useState("");
 
   const history = useHistory();
 
-  const [show, setShow] = useState("d-none");
+  // const HasItShown = () => {
+  //   const [show, setShow] = useState("d-none");
+  //   useEffect(() => {
+  //     document.getElementsByTagName("H1").setAttribute("class", show);
+  //   }, []);
+  //   useEffect(() => {
+  //     document.getElementsByTagName("H1").setAttribute("class", show);
+  //   }, [show]);
+  // };
 
-  const HasItShown = () => {
-    useEffect(() => {
-      document.getElementsByTagName("H1").setAttribute("class", show);
-    }, []);
-    // useEffect(() => {
-    //   document.getElementsByTagName("H1").setAttribute("class", show);
-    // }, [show]);
-  };
-
-  const IsShowed = () => {
-    const newShow = show === "d-none" ? "d-block" : "d-none";
-    setShow(newShow);
-  };
+  // const IsShowed = () => {
+  //   const newShow = show === "d-none" ? "d-block" : "d-none";
+  //   setShow(newShow);
+  // };
 
   const makeSubmit = async (event) => {
     event.preventDefault();
@@ -73,7 +73,7 @@ export default function AddNewPost() {
               placeholder="New post title here..."
               value={title}
               callback={setTitle}
-              onFocus={HasItShown}
+              // onFocus={HasItShown}
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ export default function AddNewPost() {
           </button>
         </form>
       </DivContainer>
-      <h1 className={`d-none ${IsShowed}`}>hi</h1>
+      {/* <h1 className={`d-none ${IsShowed}`}>hi</h1> */}
     </React.Fragment>
   );
 }

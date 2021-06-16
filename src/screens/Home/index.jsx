@@ -1,19 +1,14 @@
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavBarsinLoggeo from "../../components/NavBarsinLoggeo";
-import NavBarLoggeado from '../../components/NavBarLoggeado/index'
+// import NavBarLoggeado from '../../components/NavBarLoggeado/index'
 
-export default function HomeLogIn(){
-
-  return(
+export default function HomeLogIn() {
+  return (
     <React.Fragment>
       <header>
-       <NavBarsinLoggeo/>
+        <NavBarsinLoggeo />
       </header>
-      <main>
-        
-      </main>
-
+      <main></main>
     </React.Fragment>
-  )
+  );
 }
