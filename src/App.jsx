@@ -1,16 +1,23 @@
+
 // import logo from "./logo.svg";
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//import HomeLogIn from './Home'
+import HomeLogIn from './screens/Home';
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
 
-import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div>
         <Switch>
+          <Route exact path="/login">
+            <HomeLogIn/>
+          </Route>  
           <Route exact path="/new">
             <NewPost />
           </Route>
@@ -39,4 +46,3 @@ function App() {
   );
 }
 
-export default App;
