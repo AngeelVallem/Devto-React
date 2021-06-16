@@ -1,7 +1,5 @@
 
 import React, { useState } from "react";
-import styled from 'styled-components';
-import FormsComponent from '../Forms';
 import LoginButtons from '../LoginButtons';
 import PurpleButton from '../PurpleButton';
 import { useHistory } from "react-router";
@@ -28,6 +26,7 @@ export default function RegistrationForm (){
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(email, password, name, avatar)
 
     try {
       const newUser = JSON.stringify({

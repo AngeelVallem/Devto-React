@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import imgMenu from '../../components/NavBarsinLoggeo/images/icon4.svg';
 import imgSearch from '../../components/NavBarsinLoggeo/images/icon3.svg';
@@ -52,16 +52,7 @@ const SearchBar = styled.input`
 //   }
 // `;
 
-const CustomButton = styled.button`
-  background-color: hsl(235, 86%, 48%);
-  width: 120px;
-  height: 40px;
-  border-radius: 7px;
-  text-align: center;
-  color: white;
-  margin-left: 15px;
-  font-weight: bold;
-`;
+
 
 const DivFlex = styled.div`
   height: 100%;
@@ -116,12 +107,7 @@ const heightStyle = {
   height: "57px"
 }
 
-const colorWhitesmoke = {
-  backgroundColor: 'whitesmoke'
-}
-const colorPurple = {
-  color:  '#3E49D7'
-}
+
 
 export default function NavBarLoggeado(){
 
@@ -133,12 +119,7 @@ export default function NavBarLoggeado(){
   }
   const[width, setWidth] = useState(divWith)
 
-  const themeLight = {
-    opacity: '0.5'
-  }
-  const themeOpacity = {
-    opacity: '1'
-  }
+  
   
   function widthOpenFunction (){
     setWidth(divWith2)  
@@ -156,7 +137,6 @@ export default function NavBarLoggeado(){
 
   
   const createPost = () => {
-    console.log('aver')
     history.push("/new");
   }
 
@@ -218,9 +198,7 @@ export default function NavBarLoggeado(){
             <img className="me-4" src= {img2} alt=""/>
             <AvatarDropdown/>
 
-            <img className="me-4" src={img1} alt="" />
-            <img className="me-4" src={img2} alt="" />
-            <Avatar className="me-2"></Avatar>
+            
           </DivFlex>
         </div>
       </MenuNav>

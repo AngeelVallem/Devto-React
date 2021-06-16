@@ -21,7 +21,7 @@ const DropdownContent = styled.ul`
   background-color: white;
   border: 2px solid rgb(155, 144, 144);
   position: relative;
-  top:12vw;
+  top:17vw;
   
   -webkit-box-shadow: 5px 5px black;
           box-shadow: 5px 5px black;
@@ -51,12 +51,12 @@ export default function AvatarDropdown() {
         onMouseLeave={toggle}
         className={`${display}  pe-2 pt-1 pe-md-0 `} style={{position:'absolute'}} >
         <DropdownContent  >
-          <li><a className=" py-2"> KODEMIA <br></br> <span className="text-muted">@kodemia</span></a></li>
-          <li><a className=" py-2 border-top" href="https://dev.to/dashboard" >Dashboard</a></li>
-          <li><a className=" py-2" href="https://dev.to/new">Write a Post</a></li>
-          <li><a className=" py-2" href="https://dev.to/readinglist">Reading list</a></li>
-          <li><a className=" py-2 border-bottom" href="https://dev.to/settings">Settings</a></li>
-          <li><a className=" py-2 " href="hhttps://dev.to/signout_confirm">Sign Out</a></li>
+          <li><button  style={{backgroundColor:'transparent', border:'none'}} className=" py-2"> KODEMIA <br></br> <span className="text-muted">@kodemia</span></button></li>
+          <li><button  style={{backgroundColor:'transparent',border:'none'}} className=" py-2 border-top"  >Dashboard</button></li>
+          <li><button style={{backgroundColor:'transparent', border:'none'}} className=" py-2" >Write a Post</button></li>
+          <li><button style={{ backgroundColor:'transparent',border:'none'}} className=" py-2" >Reading list</button></li>
+          <li><button style={{ backgroundColor:'transparent',border:'none'}} className=" py-2 border-bottom" >Settings</button></li>
+          <li><button style={{ backgroundColor:'transparent',border:'none'}} className=" py-2 " >Sign Out</button></li>
         </DropdownContent>
       </div>
       

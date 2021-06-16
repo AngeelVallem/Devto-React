@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import RegistrationForm from "../../components/Registration/index";
 import NavBarsinLoggeo from "../../components/NavBarsinLoggeo";
 import '../../css/index.css';

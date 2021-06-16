@@ -1,6 +1,5 @@
 
 import React from 'react';
-import styled from 'styled-components';
 import FormsComponent from '../Forms';
 import LoginButtons from '../LoginButtons';
 import PurpleButton from '../PurpleButton';

@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import img1 from './images/icon4.svg';
 import imgSearch from './images/icon3.svg';
@@ -8,52 +8,54 @@ import '../../css/index.css'
 import { useHistory } from "react-router";
 import PurpleButton from '../PurpleButton';
 
+
 const CustomLogo = styled.div`
-  width: 54px;
-  height: 40px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  background-image: url("https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/84_Dev_logo_logos-512.png");
-  background-position: center;
-  background-size: cover;
-  &:hover {
-    opacity: 0.7;
+    width: 54px;
+    height: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/84_Dev_logo_logos-512.png");
+    background-position: center;
+    background-size: cover;
+    &:hover{
+      opacity: .7;
   }
-`;
+`
 const MenuNav = styled.nav`
   height: 56px;
   box-shadow: 0 1px 1px -1px #333;
   align-self: flex-start;
-  width: 100vw;
+  width: 100vw;  
   background: var(--header-background);
   overflow: hidden;
-`;
+`
 const SearchBar = styled.input`
-  width: 395px;
-  height: 40px;
-  background-color: #fafafa;
-  border-radius: 5px;
-  border: #b6bdc3 solid 1px;
-`;
+  width: 395px; 
+  height:40px; 
+  background-color:#fafafa; 
+  border-radius: 5px; 
+  border: #B6BDC3 solid 1px;
+`
 const Login = styled.button`
-  font-size: 1rem;
-  color: #3e49d7;
-  padding-top: 8px;
-  background-color: Transparent;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  &:hover {
-    background-color: hsl(240, 6%, 87%);
-  }
-`;
+    font-size: 1rem;
+    color: #3E49D7;
+    padding-top: 8px;
+    background-color: Transparent;
+    border:none;
+    cursor:pointer;
+    overflow: hidden;    
+    &:hover{
+      background-color: hsl(240, 6%, 87%);
+
+    }
+`
 
 const DivFlex = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-`;
-const SidePanel = styled.div`
+`
+ const SidePanel = styled.div`
   height: 100vh; /* Specify a height */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
@@ -73,18 +75,18 @@ const SidePanel = styled.div`
   &:hover{
     color: #3E49D7;
   }
-`;
+ `
 
-// const CloseButton = styled.a`
-//   position: absolute;
-//   top: 0;
-//   right: 25px;
-//   font-size: 36px;
-//   margin-left: 50px;
-// `;
+ const CloseButton = styled.a`
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+ `
 const heightStyle = {
-  height: "57px",
-};
+  height: "57px"
+}
 
 const colorWhitesmoke = {
   backgroundColor: 'whitesmoke'
@@ -94,8 +96,25 @@ const colorPurple = {
 }
 
 
+export default function NavBarsinLoggeo(){
+  const divWith = {
+    width: '0vw'
+  }
+  const divWith2 = {
+    width: '80vw'
+  }
+  const[width, setWidth] = useState(divWith)
 
-export default function NavBarsinLoggeo() {
+  
+  
+  function widthOpenFunction (){
+    setWidth(divWith2)  
+  }
+
+  function widthCloseFunction(){
+    setWidth(divWith)
+  }
+
   const history = useHistory();
 
   const changePage = () => {
@@ -104,11 +123,11 @@ export default function NavBarsinLoggeo() {
 
   
   const changeToLogin = () => {
-    history.push("/loginenter");
+    history.push("/users/login");
   }
   const changeToRegistration = () => {
     console.log('aver')
-    history.push("/registration");
+    history.push("/users/registration");
 
   }
 
@@ -164,13 +183,13 @@ export default function NavBarsinLoggeo() {
             <input type="image" src= {img1} onClick={widthOpenFunction} alt=""/>
           </DivFlex>
           <DivFlex className=" justify-content-end ms-4 px-0 col-2  col-md-1 ">
-            <CustomLogo className="" onClick={changePage}></CustomLogo>
+            <CustomLogo className="" onClick={changePage} ></CustomLogo>  
           </DivFlex>
           <DivFlex className="col-3 col-md-5 justify-content-start ps-0">
-            <img className=" ms-5 ps-4  d-md-none" src={imgSearch} alt="" />
-            <form className=" d-none d-md-block ps-3">
-              <SearchBar type="text" name="q" placeholder="Search..." />
-            </form>
+            <img className=" ms-5 ps-4  d-md-none" src= {imgSearch} alt=""/>
+            <form className=' d-none d-md-block ps-3' >
+                <SearchBar type="text" name="q" placeholder="Search..."  />
+            </form> 
           </DivFlex>
           <DivFlex className=" px-0 col-5 col-md-5 d-flex justify-content-end">
             <Login onClick={changeToLogin} href="" className="d-none d-md-inline d-flex fw-bold rounded-pill">Log in</Login>        

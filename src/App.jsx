@@ -22,13 +22,13 @@ export default function App() {
           <Route exact path="/homenotlogged">
             <HomeNotLogged/>
           </Route> 
-          <Route exact path="/loginenter">
+          <Route exact path="/users/login">
             <LogIn/>
           </Route> 
           <Route exact path="/">
             <HomeLoggedIn/>
           </Route>
-          <Route exact path="/registration">
+          <Route exact path="/users/registration">
             <Registration/>
           </Route>
 
