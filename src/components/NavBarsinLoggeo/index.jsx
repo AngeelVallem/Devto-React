@@ -1,11 +1,12 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import img1 from './images/icon4.svg';
 import imgSearch from './images/icon3.svg';
-import colors from '../../Globals'
+import '../../css/index.css'
 
 import { useHistory } from "react-router";
+import PurpleButton from '../PurpleButton';
 
 
 const CustomLogo = styled.div`
@@ -49,17 +50,6 @@ const Login = styled.button`
     }
 `
 
-const CustomButton = styled.button`
-  background-color: hsl(235, 86%, 48%);
-  width: 140px;
-  height: 40px;
-  border-radius: 7px;
-  text-align: center;
-  color: white;
-  margin-left: 15px;
-  font-weight: bold;
-`
-
 const DivFlex = styled.div`
   height: 100%;
   display: flex;
@@ -67,24 +57,23 @@ const DivFlex = styled.div`
 `
  const SidePanel = styled.div`
   height: 100vh; /* Specify a height */
-  width: 80vw; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
   background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+ 
  `
  const ListSidePanel = styled.a`
   padding: 8px 8px 8px 8px;
   text-decoration: none;
-  font-size: 20px;
-  color: #818181;
+  font-size: 17px;
+  color: black;
   display: block;
   transition: 0.3s;
   &:hover{
-    color: #f1f1f1;
+    color: #3E49D7;
   }
  `
 
@@ -102,59 +91,101 @@ const heightStyle = {
 const colorWhitesmoke = {
   backgroundColor: 'whitesmoke'
 }
+const colorPurple = {
+  color:  '#3E49D7'
+}
 
 
 export default function NavBarsinLoggeo(){
+  const divWith = {
+    width: '0vw'
+  }
+  const divWith2 = {
+    width: '80vw'
+  }
+  const[width, setWidth] = useState(divWith)
+
+  const themeLight = {
+    opacity: '0.5'
+  }
+  const themeOpacity = {
+    opacity: '1'
+  }
+  
+  function widthOpenFunction (){
+    setWidth(divWith2)  
+  }
+
+  function widthCloseFunction(){
+    setWidth(divWith)
+  }
 
   const history = useHistory();
 
   const changePage = () => {
-    history.push("/login");
+    history.push("/homenotlogged");
   }
 
+  
+  const changeToLogin = () => {
+    history.push("/loginenter");
+  }
+  const changeToRegistration = () => {
+    console.log('aver')
+    history.push("/registration");
 
+  }
 
   return (
-    <header className= 'sticky-top'>
+    <header className= 'fixed-top'>
       <MenuNav className='container-fluid bg-white  '>
         <div className="row  h-100">
           <DivFlex className="col-1 ps-3  d-md-none ">
+            <SidePanel id="mySidepanel" style={width}>
+              <CloseButton onClick={widthCloseFunction}>&times;</CloseButton>
+                <div style={heightStyle} className=" d-flex align-items-center border-bottom "><h5 className="pt-2 fw-bold ps-4">DEV Community</h5></div>
+                <div style={colorWhitesmoke} className=" d-flex flex-column align-items-center my-2 border rounded mx-2">
+                  <p className="fw-bolder"><span style={colorPurple} >DEV Community </span>  is a community of 638,230 amazing developers</p>
+                  <p className="fw-bold">We´re a place where coders share, stay up-to-date and grow their careers</p>
+                  <PurpleButton
+                      className="mx-2"
+                      text="Create new account"
+                      style={{ widht: '10rem' }}
 
-            <SidePanel id="mySidepanel" >
-            <CloseButton href="javascript:void(0)" onclick="closeNav()">&times;</CloseButton>
-              <div style={heightStyle} class=" d-flex align-items-center border-bottom "><h5 class="pt-2 fw-bold ps-4">DEV Community</h5></div>
-              <div style={colorWhitesmoke} className=" my-2 border rounded mx-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, vitae assumenda ratione inventore ducimus porro unde doloribus est. Itaque harum, rem nam provident dolore ducimus quia ipsum, repellendus alias exercitationem ut nemo obcaecati, sed enim hic temporibus facilis. Deleniti quis doloribus tempora blanditiis eius reiciendis quos laborum alias rerum enim?</div>
+                    />
+                  
+                    <p onClick={changeToLogin} style={colorPurple} className=" mt-2 fw-bold" >Log in </p></div>
+                  
+                  
+                
 
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Home</ListSidePanel>
-              </div>
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Sign In/Up</ListSidePanel>
-              </div>
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Listings</ListSidePanel>
-              </div>
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Podcast</ListSidePanel>
-              </div>
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Videos</ListSidePanel>
-              </div>
-              <div className="d-flex ms-4">
-                 <img src={img1} alt="" />
-                 <ListSidePanel href="#">Tags</ListSidePanel>
-              </div>
-              
-              
-
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Home</ListSidePanel>
+                </div>
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Sign In/Up</ListSidePanel>
+                </div>
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Listings</ListSidePanel>
+                </div>
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Podcast</ListSidePanel>
+                </div>
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Videos</ListSidePanel>
+                </div>
+                <div className="d-flex ms-4">
+                  <img src={img1} alt="" />
+                  <ListSidePanel href="#">Tags</ListSidePanel>
+                </div>             
             </SidePanel>
 
-            <input type="image" src= {img1} alt=""/>
+            <input type="image" src= {img1} onClick={widthOpenFunction} alt=""/>
           </DivFlex>
           <DivFlex className=" justify-content-end ms-4 px-0 col-2  col-md-1 ">
             <CustomLogo className="" onClick={changePage} ></CustomLogo>  
@@ -166,8 +197,12 @@ export default function NavBarsinLoggeo(){
             </form> 
           </DivFlex>
           <DivFlex className=" px-0 col-5 col-md-5 d-flex justify-content-end">
-            <Login href="" className="d-none d-md-inline d-flex fw-bold rounded-pill">Log in</Login>             
-            <CustomButton className="">Create account</CustomButton>
+            <Login onClick={changeToLogin} href="" className="d-none d-md-inline d-flex fw-bold rounded-pill">Log in</Login>        
+            <PurpleButton
+              text="Create account"
+              onClick={changeToRegistration}
+
+            />     
           </DivFlex>
         </div>
       </MenuNav>

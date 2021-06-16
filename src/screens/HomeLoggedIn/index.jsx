@@ -1,14 +1,15 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavBarsinLoggeo from "../../components/NavBarsinLoggeo";
+import NavBarLoggeado from '../../components/NavBarLoggeado/index'
 import '../../css/index.css'
 
-export default function HomeNotLogged(){
+export default function HomeLoggedIn(){
 
   return(
     <React.Fragment>
       <header>
-       <NavBarsinLoggeo/>
+       <NavBarLoggeado/>
       </header>
       <main>
         

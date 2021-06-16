@@ -1,9 +1,11 @@
 
 import React, { useEffect, useState } from "react";
+import LogInRegistration from "../../components/Login";
 import NavBarsinLoggeo from "../../components/NavBarsinLoggeo";
-import '../../css/index.css'
+import '../../css/index.css';
 
-export default function HomeNotLogged(){
+
+export default function LogIn(){
 
   return(
     <React.Fragment>
@@ -11,7 +13,7 @@ export default function HomeNotLogged(){
        <NavBarsinLoggeo/>
       </header>
       <main>
-        
+        <LogInRegistration/>
       </main>
 
     </React.Fragment>
