@@ -1,14 +1,15 @@
-
 // import logo from "./logo.svg";
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //import HomeLogIn from './Home'
-import HomeLogIn from './screens/Home';
+import HomeLogIn from "./screens/Home";
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
 
+//import detail's post
+import PostDetail from "./screens/postDetail";
 
 export default function App() {
   return (
@@ -16,10 +17,13 @@ export default function App() {
       <div>
         <Switch>
           <Route exact path="/login">
-            <HomeLogIn/>
-          </Route>  
+            <HomeLogIn />
+          </Route>
           <Route exact path="/new">
             <NewPost />
+          </Route>
+          <Route exact path="/detail">
+            <PostDetail />
           </Route>
         </Switch>
       </div>
@@ -45,4 +49,3 @@ export default function App() {
     // </div>
   );
 }
-
