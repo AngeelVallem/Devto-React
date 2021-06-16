@@ -1,7 +1,14 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 
 import TitleAside from "./asideElements";
+
+const InputStyle = styled.input`
+  border: 0;
+  outline: none;
+  width: 100%;
+  margin: 0.5rem;
+`;
 
 export default function CustomInput(props) {
   const isIdTitle = props.id === "Title";
@@ -9,7 +16,7 @@ export default function CustomInput(props) {
   const isIdPost = props.id === "Post";
 
   return (
-    <input
+    <InputStyle
       type={props.type ? props.type : "text"}
       id={props.id}
       placeholder={props.placeholder}
