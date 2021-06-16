@@ -9,7 +9,6 @@ import HomeLogIn from './screens/Home';
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
 
-import "./App.css";
 
 export default function App() {
   return (
