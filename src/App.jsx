@@ -4,10 +4,14 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //import HomeLogIn from './Home'
-import HomeLogIn from './screens/Home';
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
+import HomeNotLogged from './screens/Home';
+import LogIn from './screens/Login/index'
+import HomeLoggedIn from './screens/HomeLoggedIn/index'
+import Registration from './screens/Registration';
+
 
 
 export default function App() {
@@ -15,9 +19,19 @@ export default function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/login">
-            <HomeLogIn/>
-          </Route>  
+          <Route exact path="/homenotlogged">
+            <HomeNotLogged/>
+          </Route> 
+          <Route exact path="/loginenter">
+            <LogIn/>
+          </Route> 
+          <Route exact path="/">
+            <HomeLoggedIn/>
+          </Route>
+          <Route exact path="/registration">
+            <Registration/>
+          </Route>
+
           <Route exact path="/new">
             <NewPost />
           </Route>
