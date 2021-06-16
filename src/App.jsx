@@ -7,6 +7,10 @@ import HomeLogIn from "./screens/Home";
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
+import HomeNotLogged from "./screens/Home";
+import LogIn from "./screens/Login/index";
+import HomeLoggedIn from "./screens/HomeLoggedIn/index";
+import Registration from "./screens/Registration";
 
 //import detail's post
 import PostDetail from "./screens/postDetail";
@@ -19,6 +23,19 @@ export default function App() {
           <Route exact path="/login">
             <HomeLogIn />
           </Route>
+          <Route exact path="/homenotlogged">
+            <HomeNotLogged />
+          </Route>
+          <Route exact path="/loginenter">
+            <LogIn />
+          </Route>
+          <Route exact path="/">
+            <HomeLoggedIn />
+          </Route>
+          <Route exact path="/registration">
+            <Registration />
+          </Route>
+
           <Route exact path="/new">
             <NewPost />
           </Route>
