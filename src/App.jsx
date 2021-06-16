@@ -1,32 +1,36 @@
-
 // import logo from "./logo.svg";
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //import HomeLogIn from './Home'
+import HomeLogIn from "./screens/Home";
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
-import HomeNotLogged from './screens/Home';
-import LogIn from './screens/Login/index'
-import HomeLoggedIn from './screens/HomeLoggedIn/index'
-import Registration from './screens/Registration';
+import HomeNotLogged from "./screens/Home";
+import LogIn from "./screens/Login/index";
+import HomeLoggedIn from "./screens/HomeLoggedIn/index";
+import Registration from "./screens/Registration";
 
-
+//import detail's post
+import PostDetail from "./screens/postDetail";
 
 export default function App() {
   return (
     <Router>
       <div>
         <Switch>
+          <Route exact path="/login">
+            <HomeLogIn />
+          </Route>
           <Route exact path="/homenotlogged">
-            <HomeNotLogged/>
-          </Route> 
-          <Route exact path="/users/login">
-            <LogIn/>
-          </Route> 
+            <HomeNotLogged />
+          </Route>
+          <Route exact path="/user/login">
+            <LogIn />
+          </Route>
           <Route exact path="/">
-            <HomeLoggedIn/>
+            <HomeLoggedIn />
           </Route>
           <Route exact path="/users/registration">
             <Registration/>
@@ -34,6 +38,9 @@ export default function App() {
 
           <Route exact path="/new">
             <NewPost />
+          </Route>
+          <Route exact path="/detail">
+            <PostDetail />
           </Route>
         </Switch>
       </div>
@@ -59,4 +66,3 @@ export default function App() {
     // </div>
   );
 }
-

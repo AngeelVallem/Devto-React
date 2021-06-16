@@ -7,8 +7,23 @@ import CustomInput from "./inputCreate";
 const DivContainer = styled.div`
   background: #ffffff;
   margin: 3rem;
-  width: 30vw;
+  width: 70vw;
   heigth: 50vh;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 1px 0.5px rgba(0, 0, 0, 0.2);
+`;
+
+const H1Title = styled.h1`
+  font-size: 3rem;
+  font-weight: 500;
+`;
+
+const SaveButton = styled.button`
+  background: #d2d6db;
+  border-color: #d2d6db;
+  color: gray;
+  margin: 0 10px;
 `;
 
 export default function AddNewPost() {
@@ -51,14 +66,14 @@ export default function AddNewPost() {
               callback={setCover}
             />
           </div>
-          <div>
+          <H1Title>
             <CustomInput
               id="Title"
               placeholder="New post title here..."
               value={title}
               callback={setTitle}
             />
-          </div>
+          </H1Title>
           <div>
             <CustomInput
               id="Tags"
@@ -87,9 +102,9 @@ export default function AddNewPost() {
           <button className="btn btn-primary mt-2" type="submit">
             Publish
           </button>
-          <button className="btn btn-primary mt-2" type="button">
+          <SaveButton className="btn btn-primary mt-2" type="button">
             Save Draft
-          </button>
+          </SaveButton>
         </form>
       </DivContainer>
       {/* <TitleAside></TitleAside> */}

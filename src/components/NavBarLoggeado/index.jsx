@@ -60,20 +60,7 @@ const DivFlex = styled.div`
   align-items: center;
 `;
 
-const Avatar = styled.div`
-  width: 30px;
-  height: 30px;
-  background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--4jmu4dyU--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590734/31d54d9d-b30a-40f4-afcc-3aa60880a06c.png");
-  background-size: cover;
-  border-radius: 1000px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  
-
-`
 const SidePanel = styled.div`
   height: 100vh; /* Specify a height */
   position: fixed; /* Stay in place */
