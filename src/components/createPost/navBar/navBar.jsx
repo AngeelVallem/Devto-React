@@ -7,9 +7,10 @@ import EditText from "./editText"; //"edit, preview" nav that apears up
 import CloseBtn from "./closeBtn"; //close button at navbar
 
 const CustomNavPost = styled.div`
+  display: flex;
+  padding: 0.5rem;
   height: 56px;
   width: 92vw;
-  background: magenta;
 `;
 
 export default function NavPost() {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NavEdit = styled.nav`
   display: inline-block;
-  background: green;
+
   width: 200px;
 `;
 const UlEdit = styled.ul`
@@ -21,8 +21,10 @@ export default function EditText() {
   return (
     <NavEdit>
       <UlEdit>
-        <LiEdit>Edit</LiEdit>
-        <LiEdit>Preview</LiEdit>
+        <LiEdit type="button" autoFocus>
+          Edit
+        </LiEdit>
+        <LiEdit type="button">Preview</LiEdit>
       </UlEdit>
     </NavEdit>
   );

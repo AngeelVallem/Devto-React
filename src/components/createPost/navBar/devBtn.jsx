@@ -4,12 +4,7 @@ import { useHistory } from "react-router";
 
 import Logo from "../../../elements/devLogo.png";
 
-const SpanLogo = styled.span`
-  height: 40px;
-  width: 50px;
-  margin: 13px 2rem;
-  padding: 10px;
-`;
+const SpanLogo = styled.span``;
 
 const LogoDev = styled.a`
   cursor: pointer;

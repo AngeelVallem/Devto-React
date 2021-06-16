@@ -6,7 +6,9 @@ const DivBtn = styled.div`
   width: 50px;
   display: inline-block;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  border: none;
+`;
 
 export default function CloseBtn() {
   const history = useHistory();
