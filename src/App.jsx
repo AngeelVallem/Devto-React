@@ -26,7 +26,7 @@ export default function App() {
           <Route exact path="/homenotlogged">
             <HomeNotLogged />
           </Route>
-          <Route exact path="/user/login">
+          <Route exact path="/users/login">
             <LogIn />
           </Route>
           <Route exact path="/">
