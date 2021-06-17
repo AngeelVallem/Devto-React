@@ -1,8 +1,8 @@
 import React from "react";
 import NavBarsinLoggeo from "../../components/NavBarsinLoggeo";
-import '../../css/index.css'
+import "../../css/index.css";
 
-
+import Footer from "../../components/footer/footer"; //footer
 
 export default function HomeLogIn() {
   return (
@@ -10,7 +10,7 @@ export default function HomeLogIn() {
       <header>
         <NavBarsinLoggeo />
       </header>
-      <main></main>
+      <Footer />
     </React.Fragment>
   );
 }

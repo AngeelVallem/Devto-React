@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Post from "../../components/postDetail/content";
 
 import NavBarLoggeado from "../../components/NavBarLoggeado/index";
+import Footer from "../../components/footer/footer";
 
 const ContainerPost = styled.div`
   background: #eef0f1;
@@ -20,6 +21,7 @@ export default function PostDetail(newPost) {
           <div className={`col-2`}>3</div>
         </div>
       </ContainerPost>
+      <Footer></Footer>
     </React.Fragment>
   );
 }

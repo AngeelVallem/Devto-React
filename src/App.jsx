@@ -33,9 +33,8 @@ export default function App() {
             <HomeLoggedIn />
           </Route>
           <Route exact path="/users/registration">
-            <Registration/>
+            <Registration />
           </Route>
-
           <Route exact path="/new">
             <NewPost />
           </Route>
