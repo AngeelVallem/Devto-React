@@ -30,9 +30,8 @@ export default function App() {
             <Home />
           </Route>
           <Route exact path="/users/registration">
-            <Registration/>
+            <Registration />
           </Route>
-
           <Route exact path="/new">
             <NewPost />
           </Route>

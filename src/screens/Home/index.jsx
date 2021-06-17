@@ -8,6 +8,8 @@ import '../../css/index.css'
 
 
 
+import Footer from "../../components/footer/footer"; //footer
+
 export default function HomeLogIn() {
   return (
     <React.Fragment>
