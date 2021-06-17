@@ -9,7 +9,7 @@ import HomeLogIn from "./screens/Home";
 import NewPost from "./screens/createPost";
 import HomeNotLogged from "./screens/Home";
 import LogIn from "./screens/Login/index";
-import HomeLoggedIn from "./screens/HomeLoggedIn/index";
+import Home from "./screens/Home";
 import Registration from "./screens/Registration";
 
 //import detail's post
@@ -30,7 +30,7 @@ export default function App() {
             <LogIn />
           </Route>
           <Route exact path="/">
-            <HomeLoggedIn />
+            <Home />
           </Route>
           <Route exact path="/users/registration">
             <Registration/>
