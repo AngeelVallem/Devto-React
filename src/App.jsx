@@ -8,10 +8,9 @@ import HomeLogIn from "./screens/Home";
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
 import LogIn from "./screens/Login/index";
-import HomeLoggedIn from "./screens/HomeLoggedIn/index";
 import Registration from "./screens/Registration";
 
-import Home from './screens/Home'
+import Home from '../src/screens/Home'
 
 //import detail's post
 import PostDetail from "./screens/postDetail";
