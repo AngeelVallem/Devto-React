@@ -12,7 +12,7 @@ const CustomButton = styled.button`
 `
 
 
-export default function PurpleButton({ type, onClick:onClickProps, className: classNameProps, text:textProps, style:styleProps }) {
+export default function PurpleButton({  onClick:onClickProps, className: classNameProps, text:textProps, style:styleProps }) {
   const className = classNameProps ? classNameProps : "";
   const text = textProps? textProps: '';
   const style = styleProps ? styleProps : {};

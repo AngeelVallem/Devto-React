@@ -36,7 +36,7 @@ export default function RegistrationForm (){
         name
       });
       const response = await fetch(
-        "http://localhost:8080/users",
+        "http://localhost:8080/users/registration",
         {
           method: "POST",
           headers: {
