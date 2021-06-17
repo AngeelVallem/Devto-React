@@ -3,11 +3,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //import HomeLogIn from './Home'
-import HomeLogIn from "./screens/Home";
+import HomeLogIn from "./screens/Home/index";
 
 // import Button from "./Test";
 import NewPost from "./screens/createPost";
-import HomeNotLogged from "./screens/Home";
 import LogIn from "./screens/Login/index";
 import Home from "./screens/Home";
 import Registration from "./screens/Registration";
@@ -23,9 +22,7 @@ export default function App() {
           <Route exact path="/login">
             <HomeLogIn />
           </Route>
-          <Route exact path="/homenotlogged">
-            <HomeNotLogged />
-          </Route>
+          
           <Route exact path="/users/login">
             <LogIn />
           </Route>

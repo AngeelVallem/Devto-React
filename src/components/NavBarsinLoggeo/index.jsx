@@ -118,7 +118,7 @@ export default function NavBarsinLoggeo(){
   const history = useHistory();
 
   const changePage = () => {
-    history.push("/homenotlogged");
+    history.push("/login");
   }
 
   
