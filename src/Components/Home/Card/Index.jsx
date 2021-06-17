@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from 'react-router-dom'
+ 
 import CardImage from "./CardImage";
 import Image from "../../Image";
 import Button from "../../Button"
@@ -17,28 +18,27 @@ const CustomCard = styled.div`
   margin-bottom : 1rem
 `;
 
-export default function Card() {
+export default function Card({post,index}) {
   return (
+    <Link to={`/${post._id}`}>
     <CustomCard className="card shadow-sm">
-      <CardImage />
+      {index === 0 ?   <CardImage img={post.coverUrl}/> : ''}
       <div className="d-flex px-3 pt-3">
         <Image
           size="30px"
           circle
-          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ksMvsu8E--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/415021/161034a1-87b4-4729-b35c-24dfd4ddb59d.jpg"
+          src={post.avatar}
         />
         <div className="mx-2">
-          <p className="m-0"> User name </p>
+          <p className="m-0"> {post.author}</p>
           <p>Jun 8 (6 days ago)</p>
         </div>
       </div>
       <h1 className="w-100 px-3 font-weight-bold">
-        Card title Card title Card titleCard title
+        {post.postTitle}
       </h1>
       <ul className='list-inline d-flex mx-3 w-100'>
-        <li className='text-muted'>#TAG1</li>
-        <li className='text-muted mx-2'>#TAG3</li>
-        <li className='text-muted'>#TAG2</li>
+        <li className='text-muted'>{post.postTags}</li>
       </ul>
       <div className='d-flex px-3 justify-content-between align-items-center mb-2'>
         <ul className='list-inline d-flex align-items-center m-0'>
@@ -51,5 +51,6 @@ export default function Card() {
       </div>
       </div>
     </CustomCard>
+    </Link>
   );
 }

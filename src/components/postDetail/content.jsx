@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import styled from "styled-components";
 // import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router";
@@ -50,6 +50,12 @@ const H3UserDetail = styled.h3`
 `;
 
 export default function Post() {
+const [post, setPost] = useState(null)
+
+useEffect(() => {
+
+},[])
+
   return (
     <React.Fragment>
       <DivPost className={`col-7`}>

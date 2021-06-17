@@ -26,7 +26,7 @@ export default function RegistrationForm (){
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(email, password, name, avatar)
+
 
     try {
       const newUser = JSON.stringify({
@@ -36,7 +36,7 @@ export default function RegistrationForm (){
         name
       });
       const response = await fetch(
-        "http://localhost:8080/users",
+        "http://localhost:8080/users/registration",
         {
           method: "POST",
           headers: {

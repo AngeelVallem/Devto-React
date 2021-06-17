@@ -1,15 +1,17 @@
 const API_URL =
-  "https://taco-database-default-rtdb.firebaseio.com/user/users/devto/posts";
+  "http://localhost:8080";
 
-const postURL = (id) => `${API_URL}/${id}/.json`;
+
+const postURL = `${API_URL}/posts`
 
 // Requests
-export const getPost = async (id) => {
+export const getPost = async () => {
   try {
-    const url = postURL(id);
-    const response = await fetch(url);
+    const response = await fetch(postURL);
     return await response.json();
   } catch (error) {
     console.log(error);
   }
 };
+
+
